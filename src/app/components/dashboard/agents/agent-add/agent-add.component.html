@@ -1,0 +1,242 @@
+<p-toast />
+<form #form="ngForm">
+  <div class="updateForm">
+    <div class="card flex justify-content-center grid">
+      <div class="flex flex-column gap-2">
+        <label for="matricule">IM</label>
+        <input 
+          pInputText
+          id="matricule" 
+          name="matricule" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="nom">Nom</label>
+        <input 
+          pInputText
+          id="nom" 
+          name="nom" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="prenom">Prénom</label>
+        <input 
+          pInputText
+          id="prenom" 
+          name="prenom"
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="division">Division</label>
+        <input 
+          pInputText
+          id="division" 
+          name="division" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="grade">Grade</label>
+        <input 
+          pInputText
+          id="grade" 
+          name="grade" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="categorie_actuelle">Catégorie</label>
+        <input 
+          pInputText
+          id="categorie_actuelle"  
+          name="categorie_actuelle"  
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="corps">Corps</label>
+        <input 
+          pInputText
+          id="corps"  
+          name="corps"  
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="code_corps">Code Corps</label>
+        <input 
+          pInputText
+          id="code_corps"  
+          name="code_corps"  
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="statut">Statut</label>
+        <input 
+          pInputText
+          id="statut" 
+          name="statut" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="poste_actuel">Poste</label>
+        <input 
+          pInputText
+          id="poste_actuel" 
+          name="poste_actuel" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="indice">Indice</label>
+        <input 
+          pInputText
+          id="indice" 
+          name="indice" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="adresse">Adresse</label>
+        <input 
+          pInputText
+          id="adresse" 
+          name="adresse" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="adresse_pro">Adresse Pro</label>
+        <input 
+          pInputText
+          id="adresse_pro" 
+          name="adresse_pro" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_naissance">Date de naissance</label>
+        <input 
+          type="date"
+          id="date_naissance" 
+          name="date_naissance" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_entree_admin">Entrée à l'administration</label>
+        <input 
+          type="date"
+          id="date_entree_admin" 
+          name="date_entree_admin" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_entree_mef">Entrée MEF</label>
+        <input 
+          type="date"
+          id="date_entree_mef" 
+          name="date_entree_mef" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="prise_service">Prise de service</label>
+        <input 
+          type="date"
+          id="prise_service" 
+          name="prise_service" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_der_situation">Dernière Situation</label>
+        <input 
+          type="date"
+          id="date_der_situation" 
+          name="date_der_situation" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="cin">CIN</label>
+        <input 
+          pInputText
+          id="cin" 
+          name="cin" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="genre">Genre</label>
+        <p-dropdown 
+          [options]="genre"
+          id="genre" 
+          name="genre" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="delivrance">Délivrance</label>
+        <input 
+          pInputText
+          id="delivrance" 
+          name="delivrance" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="duplicata">Duplicata</label>
+        <input 
+          pInputText
+          id="duplicata" 
+          name="duplicata" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="situation_matrimoniale">Situation matrimoniale</label>
+        <input 
+          pInputText
+          id="situation_matrimoniale" 
+          name="situation_matrimoniale" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="contact">Contact</label>
+        <input 
+          pInputText
+          id="contact" 
+          name="contact" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="urgence">Urgence</label>
+        <input 
+          pInputText
+          id="urgence" 
+          name="urgence" 
+          ngModel
+          />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="region">Région</label>
+        <input 
+          pInputText
+          id="region" 
+          name="region" 
+          ngModel
+          />
+      </div>
+    </div>
+    <p-button label="Sauvegarder" icon="pi pi-check" severity="success" [disabled]="!form.valid" (click)="addAgent()" />
+  </div>
+</form>

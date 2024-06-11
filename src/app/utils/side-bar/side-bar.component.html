@@ -1,0 +1,17 @@
+<ul>
+  <!-- @if(auth.currentUser()?.matricule !== null) {
+    <p>{{ auth.currentUser()?.prenom }}</p>
+  } -->
+  @for(navigation of navigations; track navigation) {
+    <li>
+      <a [routerLink]="navigation.route"><i [class]="navigation.icon"></i> {{ navigation.label }}</a>
+    </li>
+  }
+  <li>
+    <a (click)="logout()"><i class="pi pi-sign-out"></i>Déconnexion</a>
+  </li>
+</ul>
+
+<div class="card flex justify-content-center gap-2">
+  <p-confirmDialog position="top" />
+</div>

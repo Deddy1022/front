@@ -1,0 +1,189 @@
+@if(agent) {
+<form  #updateForm="ngForm">
+  <div class="updateForm">
+    <div class="card flex justify-content-center grid">
+      <div class="flex flex-column gap-2">
+        <label for="matricule">IM</label>
+        <input 
+          pInputText
+          id="matricule"
+          #matricule
+          name="matricule"  
+          [ngModel]="agent.matricule" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="nom">Nom</label>
+        <input 
+          pInputText
+          id="nom"
+          #nom
+          name="nom"  
+          [ngModel]="agent.nom" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="prenom">Prenom</label>
+        <input 
+          pInputText
+          id="prenom" 
+          name="prenom"  
+          #prenom  
+          [ngModel]="agent.prenom" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="genre">Genre</label>
+        <input 
+          pInputText
+          id="genre" 
+          name="genre"  
+          #genre  
+          [ngModel]="agent.genre" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="division">Division</label>
+        <input 
+          pInputText
+          id="division" 
+          name="division"  
+          #division  
+          [ngModel]="agent.division" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="grade">Grade</label>
+        <input 
+          pInputText
+          id="grade" 
+          name="grade"  
+          #grade  
+          [ngModel]="agent.grade" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="indice">Indice</label>
+        <input 
+          pInputText
+          id="indice" 
+          name="indice"  
+          #indice  
+          [ngModel]="agent.indice" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="categorie_actuelle">Catégorie</label>
+        <input 
+          pInputText
+          id="categorie_actuelle" 
+          name="categorie_actuelle"
+          #categorie_actuelle   
+          [ngModel]="agent.categorie_actuelle" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="statut">Statut</label>
+        <input 
+          pInputText
+          id="statut" 
+          name="statut"  
+          #statut  
+          [ngModel]="agent.statut" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="poste_actuel">Poste</label>
+        <input 
+          pInputText
+          id="poste_actuel" 
+          name="poste_actuel"  
+          #poste_actuel  
+          [ngModel]="agent.poste_actuel" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="corps">Corps</label>
+        <input 
+          pInputText
+          id="corps" 
+          name="corps"  
+          #corps  
+          [ngModel]="agent.corps" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="code_corps">Code Corps</label>
+        <input 
+          pInputText
+          id="code_corps" 
+          name="code_corps"  
+          #code_corps  
+          [ngModel]="agent.code_corps" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_naissance">Date de naissance</label>
+        <input 
+          pInputText
+          id="date_naissance" 
+          #date_naissance 
+          name="date_naissance" 
+          [ngModel]="agent.date_naissance" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_entree_admin">Entrée à l'administration</label>
+        <input 
+          pInputText
+          id="date_entree_admin" 
+          #date_entree_admin 
+          name="date_entree_admin" 
+          [ngModel]="agent.date_entree_admin" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_entree_mef">Entrée MEF</label>
+        <input 
+          pInputText
+          id="date_entree_mef" 
+          #date_entree_mef 
+          name="date_entree_mef" 
+          [ngModel]="agent.date_entree_mef" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="prise_service">Prise de service</label>
+        <input 
+          pInputText
+          id="prise_service" 
+          #prise_service 
+          name="prise_service" 
+          [ngModel]="agent.prise_service" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="date_der_situation">Dernière Situation</label>
+        <input 
+          pInputText
+          id="date_der_situation" 
+          #date_der_situation 
+          name="date_der_situation" 
+          [ngModel]="agent.date_der_situation" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="cin">CIN</label>
+        <input 
+          pInputText
+          id="cin"
+          name="cin"  
+          #cin  
+          [ngModel]="agent.cin" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="situation_matrimoniale">Situation matrimoniale</label>
+        <input 
+          pInputText
+          id="situation_matrimoniale" 
+          #situation_matrimoniale 
+          name="situation_matrimoniale"
+          [ngModel]="agent.situation_matrimoniale" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="contact">Contact</label>
+        <input 
+          pInputText
+          id="contact" 
+          #contact 
+          name="contact"
+          [ngModel]="agent.contact" />
+      </div>
+    </div>
+    <p-button label="Sauvegarder" icon="pi pi-check" severity="success" (click)="updateAgentinfo()" />
+  </div>
+</form>
+}

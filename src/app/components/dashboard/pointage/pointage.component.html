@@ -1,0 +1,56 @@
+<div  class="table">
+  <p-button class="btn btn--add" icon="pi pi-user" routerLink="pointageView" />
+  <p-table
+    [value]="agents"
+    [paginator]="true"
+    [rows]="5"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [rowsPerPageOptions]="[5, 10, 20, 60]"
+>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width:10%">MATRICULE</th>
+        <th style="width:25%">NOM</th>
+        <th style="width:15%">PRENOM</th>
+        <th style="width:15%">DIVISION</th>
+        <th style="width:15%">ACTION</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-agent>
+      
+      <tr>
+        <td>
+          <input type="text" name="matricule" [value]="agent.matricule" #matricule />
+          {{ agent.matricule }}
+        </td>
+        <td>
+          <input type="text" name="nom" id="nom" [value]="agent.nom" #nom />
+          {{ agent.nom }}
+        </td>
+        <td>
+          <input type="text" name="prenom" id="prenom" [value]="agent.prenom" #prenom />
+          {{ agent.prenom }}
+        </td>
+        <td>
+          <input type="text" name="division" id="division" [value]="agent.division" #division />
+          <input type="date" name="enregistrement" id="enregistrement" [value]="date" #enregistrement>
+          {{ agent.division }}
+        </td>
+        <td>
+          <div class="card flex flex-wrap gap-3 justify-content-center">
+            <p-button icon="pi pi-plus" severity="success" (click)="setPointage(+(matricule.value), nom.value, prenom.value, division.value, enregistrement.value)" />
+            <p-button icon="pi pi-times" severity="warning" (onClick)="setPointageSortie(+(matricule.value))" />
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- @if(agent) {
+    <p>{{ agent.matricule }}</p>
+    <p>{{ agent.nom }}</p>
+    <p>{{ agent.prenom }}</p>
+    <p>{{ agent.division }}</p>
+    <p>{{ agent.enregistrement }}</p>
+  } -->
+</div>

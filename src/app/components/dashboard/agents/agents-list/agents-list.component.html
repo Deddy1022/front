@@ -1,0 +1,54 @@
+<div class="card flex justify-content-center gap-2">
+  <p-confirmDialog position="top" />
+</div>
+<div class="table">
+  <input type="text" #text>
+  <p-button class="btn btn--add" icon="pi pi-user" routerLink="ajouter" />
+  <span>Nombre d'agents actuel: {{ countAgent() }}</span>
+  <p-table
+  [value]="agents"
+    [paginator]="true"
+    [rows]="5"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [rowsPerPageOptions]="[5, 10, 25, 60]"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width:10%">MATRICULE</th>
+        <th style="width:25%">NOM</th>
+        <th style="width:15%">PRENOM</th>
+        <th style="width:15%">DIVISION</th>
+        <th style="width:10%">GRADE</th>
+        <th style="width:30%">POSTE</th>
+        <th style="width:20%">ACTION</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-agent>
+      @defer(on viewport) {
+        <tr>
+          <td><a [routerLink]="['update/', agent.matricule]">{{ agent.matricule }}</a></td>
+          <td>{{ agent.nom }}</td>
+          <td>{{ agent.prenom }}</td>
+          <td>{{ agent.division }}</td>
+          <td>{{ agent.grade }}</td>
+          <td>{{ agent.poste_actuel }}</td>
+          <td>
+            <p-dropdown [options]="action"  [(ngModel)]="selectedAction[agent.matricule]" (click)="handleAction(agent.matricule)" placeholder="Choisissez" />
+            <!-- <div class="btn btn-flex">
+              <p-button label="Modifier" icon="fa-solid fa-trash"></p-button>
+              <p-button label="Supprimer" styleClass="p-button-danger" icon="pi pi-trash" iconPos="left" />
+            </div> -->
+          </td>
+        </tr>
+      } @placeholder(minimum 0.4s) {
+        <h3>Loading...</h3>
+      }
+    </ng-template>
+  </p-table>
+
+  <!-- @if(selectedAction === "Modifier") {
+    <p>Vous avez choisi modifier</p>
+  } @else if(selectedAction === "Supprimer") {
+    <p>Supprimer</p>
+  } -->
+</div>
